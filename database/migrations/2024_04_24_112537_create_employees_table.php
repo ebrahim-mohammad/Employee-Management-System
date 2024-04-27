@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->foreignId('department_id')->constrained();
             $table->string('position');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

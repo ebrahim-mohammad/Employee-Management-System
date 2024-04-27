@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Employee extends Model
 {
     use HasFactory;
+    use SoftDeletes;
 
 
     protected $fillable = [
@@ -36,7 +38,7 @@ class Employee extends Model
     {
         return $this->morphMany(Note::class, 'noteable');
     }
-    
+
     public function setFirstNameAttribute($value)
     {
         $this->attributes['first_name'] = ucfirst($value);

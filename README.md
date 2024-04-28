@@ -18,3 +18,6 @@ Run the server
 To start the local server:
 
 php artisan serve
+
+You can see API documents. 
+https://documenter.getpostman.com/view/30942377/2sA3BuW8rN
